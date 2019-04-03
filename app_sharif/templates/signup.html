@@ -18,7 +18,7 @@
 
 
 
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 
 
@@ -94,6 +94,17 @@
     </div>
   </header>
   <!-- end navbar -->
+  {% if error %}
+  <!-- start alert box -->
+  <center>
+    <div class="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+کلمه عبور با تکرار کلمه عبور یکسان نمی باشد
+    </div>
+  </center>
+  <!-- end alert box -->
+
+  {% endif %}
 
   <!-- start signup form -->
   <div class="wrapper fadeInDown">
@@ -103,48 +114,61 @@
 
 
 
-  <div class="w3layouts-main">
-		<center><h2>ثبت نام</h2></center>
-		<div class="agilesign-form">
-			<div class="agileits-top">
-				<form action="#" method="post">
-					<div class="styled-input w3ls-text">
-						<input type="text" name="User Name" required=""/>
-						<label>نام کاربری</label>
-						<span></span>
-					</div>
-					<div class="styled-input w3ls-text">
-						<input type="text" name="email" required=""/>
-						<label>پست الکترونیک (E-mail)</label>
-						<span></span>
-					</div>
-					<div class="styled-input w3ls-text">
-						<input type="password" name="Password" required=""/>
-						<label>کلمه عبور</label>
-						<span></span>
-					</div>
-					<div class="styled-input w3ls-text">
-						<input type="password" name="Password" required=""/>
-						<label>تکرار کلمه عبور</label>
-						<span></span>
-					</div>
-					<div class="wthree-text">
-						<p>
-							<input type="checkbox" id="brand" value="cheack" required="">
-							<label for="brand"><span></span>من قوانین ثبت نام در این سایت را تایید میکنم</label>
-						</p>
-					</div>
-					<div class="agileits-bottom">
-						<input type="submit" value="ثبت نام">
-					</div>
-				</form>
-			</div>
-			<div class="w3agile-btm">
-				<p><a href="/login"> حساب کاربری دارم </a></p>
-			</div>
-		</div>
-	</div>
-  <!-- end signup form -->
+      <div class="w3layouts-main">
+        <center>
+          <h2>ثبت نام</h2>
+        </center>
+        <div class="agilesign-form">
+          <div class="agileits-top">
+            <form action="." method="post">
+              {% csrf_token %}
+              <div class="styled-input w3ls-text">
+                <input type="text" required name="username">
+                <label>نام کاربری</label>
+                <span></span>
+              </div>
+              <div class="styled-input w3ls-text">
+                <input type="text" required name="first_name">
+                <label>نام</label>
+                <span></span>
+              </div>
+              <div class="styled-input w3ls-text">
+                <input type="text" required name="last_name">
+                <label>نام خانوادگی</label>
+                <span></span>
+              </div>
+              <div class="styled-input w3ls-text">
+                <input type="text" required name="email">
+                <label>پست الکترونیک (E-mail)</label>
+                <span></span>
+              </div>
+              <div class="styled-input w3ls-text">
+                <input type="password" required name="password">
+                <label>کلمه عبور</label>
+                <span></span>
+              </div>
+              <div class="styled-input w3ls-text">
+                <input type="password" required name="password_repeat">
+                <label>تکرار کلمه عبور</label>
+                <span></span>
+              </div>
+              <div class="wthree-text">
+                <p>
+                  <input type="checkbox" id="brand" value="cheack" required="">
+                  <label for="brand"><span></span>من قوانین ثبت نام در این سایت را تایید میکنم</label>
+                </p>
+              </div>
+              <div class="agileits-bottom">
+                <input type="submit" value="ثبت نام">
+              </div>
+            </form>
+          </div>
+          <div class="w3agile-btm">
+            <p><a href="/login"> حساب کاربری دارم </a></p>
+          </div>
+        </div>
+      </div>
+      <!-- end signup form -->
 </body>
 <script src="{%static 'js/home.js'%}"></script>
 

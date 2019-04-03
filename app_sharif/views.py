@@ -40,12 +40,30 @@ def logout_(request):
 
 
 def signup(request):
-    return render(request,"signup.html")
+    error=False
+    if request.method== 'POST':
+        username = request.POST.get("username")
+        first_name = request.POST.get("first_name")
+        last_name = request.POST.get("last_name")
+        email = request.POST.get("email")
+        password = request.POST.get("password")
+        password_repeat = request.POST.get("password_repeat")
+        if password != password_repeat:
+            error=True
+            return render(request, "signup.html",{
+                "error":error
+                })
+        user = User.objects.create_user(username=username, first_name=first_name, last_name=last_name, email=email)
+        user.set_password(password)
+        user.save()
+
+        return HttpResponseRedirect("/")
+    return render(request, "signup.html")
 
 
 def profile(request):
     return render(request,"profile.html")
 
-    
+
 def poll(request):
     return render(request,"poll.html")
