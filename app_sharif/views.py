@@ -4,6 +4,15 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
 
+from django.http import Http404
+from django.http import HttpResponseNotFound  
+
+def myView(request, param):
+  if not param:
+    raise Http404
+
+  return render_to_response('404.html')
+
 
 def home(request):
     return render(request, "home.html")
@@ -32,3 +41,7 @@ def logout_(request):
 
 def signup(request):
     return render(request,"signup.html")
+
+
+def profile(request):
+    return render(request,"profile.html")

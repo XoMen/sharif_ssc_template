@@ -1,0 +1,336 @@
+/*--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+--*/
+
+/*end reset*/
+.profile body{
+    padding: 3em 0;
+    margin: 0;
+   -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Samim', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+	margin:0;
+}
+p{
+	margin:0;
+}
+ul{
+	margin:0;
+	padding:0;
+}
+label{
+	margin:0;
+}
+a{
+	transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+}
+a:hover{
+	transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+}
+/*--profile start here--*/
+h1 {
+    color: #fff;
+    text-align: center;
+    letter-spacing: 6px;
+    background-color: #0000004d;
+    width: 30%;
+    border-radius: 71px;
+    border-bottom: solid 1px;
+    font-size: 25px;
+    padding: 16px;
+}
+.profile-main {
+    background:#fff;
+    width: 22%;
+    margin: 2em auto;
+    padding:2.5em 2em;
+    border-radius: 5px;
+}
+.profile-pic {
+    margin: 0 0 1em 0;
+    text-align: center;
+}
+.profile-pic img {
+    border: 2px solid #11567a;
+    border-radius: 50%;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    height: 300px;
+}
+
+.profile-pic img:hover{
+  border: 2px solid rgb(17, 86, 122);
+  box-shadow: rgb(17, 86, 122 , 0.5) 3px 3px;
+  transition: 0.5s ease-out;
+  height: 310px;
+}
+
+
+.profile-pic h2 {
+    font-size: 1.8em;
+    color: rgb(17, 86, 122);
+    margin-top: 0.5em;
+    letter-spacing: 2px;
+}
+.profile-pic h2:hover{
+  color:rgb(17, 86, 122);
+  transition: 1.5s ease;
+
+}
+.profile-pic p {
+    font-size: 1em;
+    color: #f12929;
+    letter-spacing: 2px;
+    margin: 16px 0;
+}
+.wthree_tab_grid_sub {
+    margin: 1em 0 0 0;
+}
+.wthree_tab_grid_sub_left {
+	float: left;
+    width: 26.2%;
+    padding: .5em;
+    text-align: center;
+    background: #d3aefe;
+}
+.wthree_tab_grid_sub_left h5 {
+    font-size: 1.5em !important;
+    color: #fff !important;
+    font-weight: 700;
+}
+.wthree_tab_grid_sub_left p {
+	color: #fff !important;
+    font-size: .9em !important;
+    margin: 0 !important;
+}
+.wthree_tab_grid_sub_left:nth-child(2) {
+    margin: 0 1em;
+}
+.w3-message {
+    text-align: center;
+    border-top: 1px dotted #777;
+    padding: 16px 0 0;
+}
+.w3-message h5, .w3ls-touch h5 {
+    color: #000;
+    font-size: 1.5em;
+    margin: 0;
+    letter-spacing: 2px;
+}
+.w3-message p{
+	color:#999999;
+	font-size:.9em;
+	margin:1em 0 0 0;
+	line-height:1.8em;
+	letter-spacing: 1px;
+}
+.w3ls-touch{
+	margin:1em 0 0 0;
+}
+.social {
+	margin: 1em 0 0 0;
+}
+.social ul{
+	padding:0;
+	margin:0;
+}
+.social ul li {
+    display: inline-block;
+    margin: 1em 0.5em 0;
+}
+.social ul li a {
+	color: #333;
+    text-align: center;
+}
+.social ul li a i.fab.fa-facebook-f,.social ul li a i.fab.fa-twitter,.social ul li a i.fab.fa-telegram-plane,.social ul li a i.fab.fa-instagram{
+    height: 40px;
+    width: 40px;
+    background: none;
+    line-height: 40px;
+    border: solid 2px rgba(255, 255, 255, 0);
+    color: #FFF;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+.social ul li a i.fab.fa-facebook-f {
+	background: #3b5998;
+}
+.social ul li a i.fab.fa-twitter{
+	background: #1da1f2;
+}
+.social ul li a i.fab.fa-telegram-plane{
+	background: #0077b5;
+}
+.social ul li a i.fab.fa-instagram{
+	background:  RGB(193,53,132);
+}
+.social ul li a i.fab.fa-facebook-f:hover {
+	border: solid 2px #3b5998;
+    color: #3b5998;
+	background:none;
+}
+.social ul li a i.fab.fa-twitter:hover{
+	border: solid 2px #1da1f2;
+    color: #1da1f2;
+	background:none;
+}
+.social ul li a i.fab.fa-telegram-plane:hover{
+	border: solid 2px #0077b5;
+    color: #0077b5;
+	background:none;
+}
+.social ul li a i.fab.fa-instagram:hover{
+	border: solid 2px RGB(193,53,132);
+    color: #dd4b39;
+	background:none;
+}
+.social ul li a p{
+    color: #212121;
+    font-size: .9em;
+    margin: 0 0 0 1em;
+    display: inline-block;
+}
+.wthree_footer_copy{
+	text-align:center;
+}
+.wthree_footer_copy p {
+    color: #FFFFFF;
+    font-size: 1em;
+    letter-spacing: 2px;
+    margin: 0;
+}
+.wthree_footer_copy p a{
+	color:#FFFFFF;
+	text-decoration:none;
+}
+.wthree_footer_copy p a:hover{
+	color:#de2acf;
+}
+/*-- responsive --*/
+@media(max-width:1440px){
+	.profile-main {
+    width: 24%;
+	}
+}
+@media(max-width:1280px){
+	.profile-main {
+		width: 29%;
+	}
+}
+@media(max-width:1080px){
+	.profile-main {
+		width: 34%;
+	}
+}
+@media(max-width:980px){
+  .profile-pic img:hover{
+    height: 300px;
+  }
+}
+@media(max-width:800px){
+	.profile-main {
+		width: 46%;
+	}
+}
+@media(max-width:736px){
+.wthree_footer_copy p {
+    line-height: 1.8em;
+}
+}
+@media(max-width:667px){
+	.profile-main {
+		width: 54%;
+	}
+	h1 {
+    font-size: 2.5em;
+}
+}
+@media(max-width:600px){
+.profile-main {
+    width: 54%;
+}
+}
+@media(max-width:568px){
+  .profile-pic img {
+height: 250px;
+}
+.profile-pic img:hover {
+height: 250px;
+}
+h1 {
+    letter-spacing: 3px;
+}
+.profile-main {
+    width: 59%;
+}
+}
+@media(max-width:480px){
+	h1 {
+		font-size: 2em;
+	}
+	.profile-pic h2 {
+    font-size: 1.5em;
+}
+}
+@media(max-width:414px){
+	h1 {
+    letter-spacing: 1px;
+}
+.profile-main {
+    width: 65%;
+}
+.wthree_footer_copy p {
+    font-size: 0.9em;
+}
+}
+@media(max-width:384px){
+	.profile-main {
+		padding: 1em;
+	}
+	.profile-main {
+		width: 80%;
+	}
+}
+@media(max-width:320px){
+	h1 {
+		font-size: 1.6em;
+	}
+	.wthree_tab_grid_sub_left p {
+		font-size: .8em !important;
+	}
+.profile-pic h2 {
+    font-size: 1.3em;
+}
+.social ul li {
+    margin: 1em 0.1em 0;
+}
+
+body {
+    padding: 2em 0;
+}
+}
+/*-- //responsive --*/
