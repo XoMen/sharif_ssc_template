@@ -1,0 +1,192 @@
+{% load js %}
+<script type="text/javascript">
+    var someVar = {{ some_var | js }};
+</script>
+<head>
+  <script type="text/javascript" , src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular.min.js">
+  </script>
+  <script type="text/javascript" src="/static/js/poll.js">
+  </script>
+</head>
+<body ng-app='polApp'>
+  <!--engine-->
+  <div class="container" ng-controller="pollCtrl">
+    <h1>Question go here?</h1>
+    <div class="question" ng-hide="answered">
+
+      <button type="button" name="Yes" ng-click="addYes(); answered = true">Yes</button>
+      <button type="button" name="No" ng-click="addNo(); answered = true">No</button>
+    </div>
+    <!--Chart-->
+
+    <div class="loading_bars" ng-show="answered">
+      <div class="cylinder">
+        <div class="yes_fill fill" ng-style="{height: yesPer + '%'}"></div>
+        <div class="per">{{yesPer}}%</div>
+      </div>
+      <div class="cylinder">
+        <div class="no_fill fill" ng-style="{height: noPer + '%'}"></div>
+         <div class="per">{{noPer}}%</div>
+      </div>
+    </div>
+
+    <div class="statistics" ng-show="answered">
+      <div class="yes"><span class='yess'></span><span>YES</span></div>
+      <div class="no"><span class='noo'></span><span>NO</spaN></div>
+
+
+      <div class="total">total:{{total}}</div>
+
+    </div>
+
+
+  </div>
+</body>
+
+<style>
+  @import url(https://fonts.googleapis.com/css?family=Poppins);
+@keyframes slide {
+from {
+  height: 0;
+}
+to {
+  max-height: auto;
+}
+}
+
+Body,
+html {
+baCkground-color: #666;
+margin: 0;
+padding: 0;
+}
+
+h1 {
+font-family: 'Poppins', sans-serif;
+color: #eee;
+}
+
+button {
+border: none;
+Font-size: 26px;
+font-family: 'Poppins', sans-serif;
+Width: 100px;
+Border: solid 1px #FCFFF5;
+Border-radius: 2px;
+color: #eee;
+Background-color: #91AA9D;
+Opacity: 0.7;
+}
+
+button:hover {
+opacity: 1
+}
+
+button:focus {
+outline: 0;
+}
+
+.container {
+Text-align: center;
+}
+
+.loading_bars{
+Display: inline-block;
+//vertical-Align: middle;
+}
+
+.yes_fill {
+background-image:
+  linear-gradient(
+    to right,
+     rgba(248, 211, 0,0.5) 30%,
+     rgba(248, 211, 0,0.9)  80% ,
+     rgba(248, 211, 0,0.5)
+  );
+Animation: slide 2s Ease-out forwards;
+}
+
+.no_fill {
+//Background-color: rgba(209, 194, 68, 0.8);
+background-image:
+  linear-gradient(
+    to right,
+     rgba(203,0,209,0.5) 30%,
+     rgba(203,0,209,0.9)  80% ,
+     rgba(203,0,209,0.5)
+  );
+Animation: slide 2s Ease-out forwards;
+}
+
+.cylinder {
+position: relative;
+display: inline-block;
+Margin: 10px;
+width: 90px;
+height: 300px;
+
+}
+.fill {
+position: absolute;
+left: 0;
+bottom: 0;
+width: 90px;
+height: 0;
+padding-top: 50px;
+border-radius: 50px/25px;
+-webkit-box-shadow: 2px 10px 36px -6px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 10px 36px -6px rgba(0,0,0,0.75);
+box-shadow: 2px 10px 36px -6px rgba(0,0,0,0.75);
+}
+
+.fill:before {
+position: absolute;
+left: 0;
+top: 0;
+width: 90px;
+height: 40px;
+border-radius:40px/25px;
+background-color: rgba(0,0,0, .1);
+content: '';
+}
+
+.per{
+positIon: absolute;
+Font-size: 2em;
+Padding: 10px;
+font-family: 'Poppins', sans-serif;
+Color: #fff;
+marGin-top: 300px;
+Margin-left: 7px;
+}
+.statistics{
+position:absolute;
+Border: soliD 1px white;
+displaY: inline-block;
+margin-top:150px;
+padding:20px;
+Width: 100px;
+margin-rigth:2%;
+}
+.yess{
+Display: inline-block;
+background-color:rgba(248, 211, 0,.8);
+Height: 20px;
+Width: 20px;
+}
+.noo{
+
+Display: inline-block;
+Background-color: rgba(203,0,209,0.8);
+Height: 20px;
+Width: 20px;
+}
+.yes{
+//Border:solid 1px yelloW;
+width:70px;
+}
+.no{
+//Border: solid 1px yellow;
+width: 70px;
+}
+</style>
