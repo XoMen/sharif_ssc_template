@@ -305,3 +305,38 @@ input[type=text]:placeholder, input[type=password]:placeholder {
 .icons{
   margin-left: 27px;
 }
+/* start alert styles */
+.alert {
+  width:50%;
+  font-family: 'Samim', sans-serif;
+  text-align: center;
+  align-content: initial;
+  align-items: first baseline;
+  border-radius: 47px;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 20px;
+  background-color: rgb(209, 0, 64, 0.5);
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+@media(max-width:991px) {
+  .alert{
+    width:85%;
+
+  }
+/* end alert styles */

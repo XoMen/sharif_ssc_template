@@ -180,7 +180,7 @@ nav {
   opacity: 1;
 }
 
-#cssmenu>ul>li.has-sub>a {}
+/* #cssmenu>ul>li.has-sub>a {} */
 
 #cssmenu>ul>li.has-sub>a:after {
   position: absolute;

@@ -29,7 +29,7 @@
 
       <nav id='cssmenu'>
         <div class="logo_img">
-  <img src="{%static 'img/logo.png'%}" alt="ssc logo">
+          <img src="{%static 'img/logo.png'%}" alt="ssc logo">
 
         </div>
         {% if user.is_authenticated %}
@@ -87,6 +87,18 @@
   </div>
   <!-- end navbar -->
 
+  {% if error %}
+  <!-- start alert box -->
+  <center>
+    <div class="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      نام کاربری یا کلمه عبور صحیح نمی باشد
+    </div>
+  </center>
+  <!-- end alert box -->
+
+  {% endif %}
+
   <!-- start login form -->
   <div class="wrapper fadeInDown">
     <div id="formContent">
@@ -110,12 +122,14 @@
         {% csrf_token %}
 
 
+
         <div class="icons">
           <input type="text" id="login" class="fadeIn second" name="username" placeholder="نام کاربری" required autocomplete="off">
           <i class="fas fa-user-circle"></i>
           <input type="password" id="password" class="fadeIn third" name="password" placeholder="کلمه عبور" required autocomplete="off">
           <i class="fas fa-lock"></i>
           <input type="submit" class="fadeIn fourth" value="ورود">
+
         </div>
       </form>
 

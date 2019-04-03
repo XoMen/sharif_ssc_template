@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.contrib.auth import logout , login ,authenticate
+from django.contrib.auth import logout, login, authenticate
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
@@ -10,14 +10,19 @@ def home(request):
 
 
 def login_(request):
-    if request.POST:
+    error = False
+    if request.method == 'POST':
         username = request.POST.get("username")
         password = request.POST.get("password")
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
             return HttpResponseRedirect("/")
-    return render(request, "login.html")
+        elif user is None:
+            error=True
+    return render(request, "login.html",{
+    "error":error
+    })
 
 
 def logout_(request):
