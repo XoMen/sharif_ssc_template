@@ -1,10 +1,3 @@
-/*--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
-
 /*end reset*/
 .profile body{
     padding: 3em 0;
@@ -266,7 +259,7 @@ h1 {
 		width: 54%;
 	}
 	h1 {
-    font-size: 2.5em;
+    font-size: 1.5em;
 }
 }
 @media(max-width:600px){
@@ -290,7 +283,7 @@ h1 {
 }
 @media(max-width:480px){
 	h1 {
-		font-size: 2em;
+		font-size: 1em;
 	}
 	.profile-pic h2 {
     font-size: 1.5em;
@@ -317,7 +310,7 @@ h1 {
 }
 @media(max-width:320px){
 	h1 {
-		font-size: 1.6em;
+		font-size: 1em;
 	}
 	.wthree_tab_grid_sub_left p {
 		font-size: .8em !important;

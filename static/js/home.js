@@ -35,7 +35,7 @@
       else cssmenu.addClass('dropdown');
       if (settings.sticky === true) cssmenu.css('position', 'fixed');
       resizeFix = function() {
-        var mediasize = 1060;
+        var mediasize = 1200;
         if ($(window).width() > mediasize) {
           cssmenu.find('ul').show();
         }
