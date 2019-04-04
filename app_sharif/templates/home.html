@@ -1,4 +1,5 @@
 {% load static %}
+{% load custom_tag %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -10,24 +11,28 @@
   <link href="https://cdn.rawgit.com/rastikerdar/samim-font/v3.0.0/dist/font-face.css" rel="stylesheet" type="text/css" />
   <!-- static links -->
   <link rel="stylesheet" href="{%static 'css/home.css'%}">
+  <link rel="stylesheet" href="{%static 'css/slider.css'%}">
   <!-- icon link -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
+  <!-- Start WOWSlider.com HEAD section -->
+  <link rel="stylesheet" type="text/css" href="/static/engine1/style.css" />
+  <script type="text/javascript" src="/static/engine1/jquery.js"></script>
+  <!-- End WOWSlider.com HEAD section -->
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  		<script src="../dist/slippry.min.js"></script>
+  		<script src="//use.edgefonts.net/cabin;source-sans-pro:n2,i2,n3,n4,n6,n7,n9.js"></script>
 </head>
-
-<style>
-
-</style>
-
 <body>
+  <!-- start navbar -->
   <div class="container">
 
     <header>
 
       <nav id='cssmenu'>
         <div class="logo_img">
-          <a  href="/"> <img src="{%static 'img/logo.png'%}" alt="ssc logo">  </a>
-      </div>
+          <a href="/"> <img src="{%static 'img/logo.png'%}" alt="ssc logo"> </a>
+        </div>
         {% if user.is_authenticated %}
         <div class="logo"><a>{{ user.get_username }} خوش آمدید </a></div>
         {% else %}
@@ -81,7 +86,75 @@
       </nav>
     </header>
   </div>
+<!-- slider 3 -->
+<div class="wrapper fadeInDown">
+<section class="demo_wrapper">
+			<article class="demo_block">
+
+
+        <ul id="demo1">
+          {% for myslide in myslide %}
+          <li><a href="#slide1"><img src="{{myslide.image}}" alt="{{myslide.title}}"></a></li>
+
+          {% endfor %}
+          </ul>
+
+
+
+
+			</article>
+		</section>
+
+		<script>
+    jQuery(document).ready(function(){
+      jQuery('selector').slippry()
+    });
+			$(function() {
+				var demo1 = $("#demo1").slippry({
+					// transition: 'fade',
+					// useCSS: true,
+					// speed: 1000,
+					// pause: 3000,
+					// auto: true,
+					// preload: 'visible',
+					// autoHover: false
+				});
+
+				$('.stop').click(function () {
+					demo1.stopAuto();
+				});
+
+				$('.start').click(function () {
+					demo1.startAuto();
+				});
+
+				$('.prev').click(function () {
+					demo1.goToPrevSlide();
+					return false;
+				});
+				$('.next').click(function () {
+					demo1.goToNextSlide();
+					return false;
+				});
+				$('.reset').click(function () {
+					demo1.destroySlider();
+					return false;
+				});
+				$('.reload').click(function () {
+					demo1.reloadSlider();
+					return false;
+				});
+				$('.init').click(function () {
+					demo1 = $("#demo1").slippry();
+					return false;
+				});
+			});
+		</script>
+</div>
 </body>
+
 <script src="{%static 'js/home.js'%}"></script>
+<script src="{%static 'js/slider.js'%}"></script>
+
 
 </html>
