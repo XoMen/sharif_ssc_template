@@ -1,7 +1,7 @@
 {% load static %}
 {% load custom_tag %}
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="rtl">
 
 <head>
   <meta charset="utf-8">
@@ -14,14 +14,15 @@
   <link rel="stylesheet" href="{%static 'css/slider.css'%}">
   <!-- icon link -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <!-- Start WOWSlider.com HEAD section -->
-  <link rel="stylesheet" type="text/css" href="/static/engine1/style.css" />
-  <script type="text/javascript" src="/static/engine1/jquery.js"></script>
-  <!-- End WOWSlider.com HEAD section -->
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-      <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-  		<script src="../dist/slippry.min.js"></script>
-  		<script src="//use.edgefonts.net/cabin;source-sans-pro:n2,i2,n3,n4,n6,n7,n9.js"></script>
+  <!-- grid links -->
+  <link rel="icon" href="/static/assets/img/favicon/myfavicon.ico">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:400,500" rel="stylesheet">
+	<link rel="stylesheet" href="/static/assets/vendor/strokegap/style.css">
+	<link rel="stylesheet" href="/static/assets/vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/static/assets/vendor/linearicons/style.css">
+	<link rel="stylesheet" href="/static/assets/css/bundle.css">
+	<link rel="stylesheet" href="/static/assets/css/style.css">
+
 </head>
 <body>
   <!-- start navbar -->
@@ -151,6 +152,48 @@
 			});
 		</script>
 </div>
+<!-- end slider -->
+
+<!-- start grid -->
+<section class="py-5">
+  <div class="container grid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="row">
+          {% for mygrid in mygrid %}
+          {% if mygrid.active %}
+          <div class="col-md-4 mb-4">
+            <div class="card border-0 box-shadow-v1 u-h-100p">
+              <img src="{{mygrid.image}}" alt="">
+              <div class="u-p-30 bg-white">
+                <p class="d-flex text-muted">
+                  <span>
+                    <i class="icon icon-Time mr-1"></i> May 24, 2017</span>
+                    </p>
+                <h4>{{mygrid.title |safe}}</h4>
+                <hr>
+                <p>
+                  {{mygrid.description|safe}}
+                </p>
+                <a href="#" class="btn btn-purple my-3">{{mygrid.button|safe}}</a>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="scroll-top bg-white box-shadow-v1">
+  <i class="fa fa-angle-up" aria-hidden="true"></i>
+</div>
+<script src="/static/assets/js/bundle.js"></script>
+<script src="/static/assets/js/devdap.js"></script>
 </body>
 
 <script src="{%static 'js/home.js'%}"></script>

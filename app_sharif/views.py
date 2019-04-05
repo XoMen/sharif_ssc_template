@@ -3,7 +3,7 @@ from django.contrib.auth import logout, login, authenticate
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
-from app_sharif.models import slider
+from app_sharif.models import slider,grid
 
 from django.http import Http404
 from django.http import HttpResponseNotFound
@@ -17,8 +17,10 @@ def myView(request, param):
 
 def home(request):
     myslide = slider.objects.all()
+    mygrid = grid.objects.all()
     return render(request, "home.html",{
-    'myslide':myslide
+    'myslide':myslide,
+    'mygrid':mygrid,
     })
 
 
