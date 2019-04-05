@@ -10,7 +10,7 @@ class slider(models.Model):
     def __str__(self):
         return self.title
 
-class grid(models.Model):
+class post(models.Model):
     active=models.BooleanField(default="True")
     image=models.ImageField(upload_to='uploads/')
     title=models.CharField(max_length=100, null="True")
