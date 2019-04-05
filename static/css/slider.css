@@ -4,10 +4,7 @@
 	width: 70%;
 	margin: 0 auto;
 }
-.demo_block{
-  border: 2px solid aliceblue;
 
-}
 @media only screen and (max-device-width: 800px), screen and (max-width: 800px) {
   .demo_wrapper {
     width: 80%;
@@ -157,6 +154,8 @@ max-height: 400px;
     display: block;
     width: 100%; }
     .sy-slide > a > img {
+			border: solid rgb(255, 255, 255,0.2) 9px;
+			border-radius: 20px;
       margin: 0;
       padding: 0;
       display: block;
@@ -261,7 +260,6 @@ max-height: 400px;
 
 /* pager bubbles */
 .sy-pager {
-  background: rgb(240, 248, 255,0.6);
   clear: both;
   display: block;
   padding-top: 15px;
